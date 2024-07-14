@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Flashcard>
+@{
+    ViewData["Title"] = "ListFlashcards";
+}
+
+
+<h2 class="text-center">
+    <p>Here are your flashcards</p>
+</h2>
+
+<table class="table">
+    <tr>
+        <th>Front</th>
+        <th>Back</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Front
+            </td>
+            <td>
+                @item.Back
+            </td>
+        </tr>
+    }
+</table>
+
+
+
